@@ -1,0 +1,29 @@
+<div class="jumbotron">
+
+  <h1>{{title}}</h1>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Created At</th>
+        <th>Done</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tr ng-repeat="task in tasks">
+      <td>{{task.title}}</td>
+      <td>{{task.createdAt | date: 'dd/MM/yyyy'}}</td>
+      <td>{{task.isDone}}</td>
+      <td> <input type="checkbox" ng-model="task.isDone" /> </td>
+    </tr>
+  </table>
+
+  <div class="form-group">
+    <label for="task">Title:</label>
+    <input type="text" class="form-control" id="task" ng-model="newTaskTitle">
+  </div>
+
+  <button type="button" class="btn btn-primary" ng-click="createTask(newTaskTitle)">Create task</button>
+
+</div>
