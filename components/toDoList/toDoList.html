@@ -12,10 +12,10 @@
       </tr>
     </thead>
     <tr ng-repeat="task in tasks">
-      <td>{{task.title}}</td>
+      <td ng-style="{'text-decoration': defineStyle(task.isDone)}">{{task.title}}</td>
       <td>{{task.createdAt | date: 'dd/MM/yyyy'}}</td>
-      <td>{{task.isDone}}</td>
-      <td> <input type="checkbox" ng-model="task.isDone" /> </td>
+      <td><input type="checkbox" ng-model="task.isDone" /></td>
+      <td> <button type="button" class="btn btn-danger" ng-click="deleteTask(task.id)">Delete task</button> </td>
     </tr>
   </table>
 
