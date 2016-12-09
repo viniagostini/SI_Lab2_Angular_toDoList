@@ -5,21 +5,18 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-inverse" role="navigation">
-      <div class="navbar-header">
-        <p class="navbar-brand">To Do List</p>
-      </div>
-    </nav>
-  </header>
+  <header ng-include="'templates/navbar.html'"></header>
 
   <section class="container">
     <div ng-view></div>  
   </section>
 
   <!-- Dependencies -->
+  <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/angular/angular.js"></script>
   <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 
   <!-- Config -->
   <script src="app.js"></script>
@@ -27,8 +24,7 @@
 
   <!-- Controllers -->
   <script src="components/toDoList/toDoListCtlr.js"></script>
-
-
+  <script src="components/animaisCuriosos/animaisCuriososCtlr.js"></script>
 
 </body>
 </html>

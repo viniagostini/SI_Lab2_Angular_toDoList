@@ -9,4 +9,9 @@ angular.module('toDoList')
         controller: 'toDoListCtlr'
     });
 
+    $routeProvider.when('/animais', {
+        templateUrl: 'components/animaisCuriosos/animaisCuriosos.html',
+        controller: 'animaisCuriososCtlr'
+    });
+
 }])
